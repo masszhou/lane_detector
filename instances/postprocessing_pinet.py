@@ -20,14 +20,14 @@ for y in range(net_params.grid_y):
         grid_location[y][x][1] = y
 
 
-def draw_points(x, y, image):
+def draw_points(x, y, image, scale_x=1.0, scale_y=1.0):
     color_index = 0
     for i, j in zip(x, y):
         color_index += 1
         if color_index > 12:
             color_index = 12
         for index in range(len(i)):
-            image = cv2.circle(image, (int(i[index]), int(j[index])), 3, color_palette[color_index])
+            image = cv2.circle(image, (int(i[index]*scale_x), int(j[index]*scale_y)), 4, color_palette[color_index])
 
     return image
 

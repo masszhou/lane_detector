@@ -112,11 +112,11 @@ class LaneDetector:
             in_x, in_y = sort_along_y(in_x, in_y)
             in_x, in_y = eliminate_fewer_points(in_x, in_y)
 
-            result_image = draw_points(in_x, in_y, deepcopy(image))
+            # result_image = draw_points(in_x, in_y, deepcopy(image))
 
             out_x.append(in_x)
             out_y.append(in_y)
-            out_images.append(result_image)
+            # out_images.append(result_image)
 
-        return out_x, out_y, out_images
+        return out_x, out_y
 
