@@ -8,7 +8,7 @@ My related works including
 * refactor projects
 * some detailed discussion about the original implementation.
 * make this model compatible for torch JTI compile (not included in this repo)
-* use libtorch and container to deploy this model with 0.3-0.4 second per frame on laptop with NVidia GTX 1080 (not included in this repo)
+* use libtorch and container to deploy this model with 0.03-0.04 second per frame on laptop with NVidia GTX 1080 (not included in this repo)
 
 # 2. PINet
 The key concept from original PINet paper is not doing pixel segmentation but key points detection with anchor based methods. This idea saved a lot of post-processing works compared with pixel based semantic segmentation, and more robust.
@@ -45,6 +45,15 @@ I extended the training to tusimple, culane and BDD100k. I did not dive deep int
 below is an examplar validation log with tusimple rules.
 <img src="./docs/imgs/validate_tusimple.jpeg"  width="1000" />
 
+# 3. Usage
+* test on culane, result video for [day](https://youtu.be/btAidqruAlw) and [night](https://youtu.be/HmPz5ugQD_I)
+```
+python -m scripts.predict_pinet on_folder --path="{culane_root}/driver_182_30frame/05312333_0003.MP4" --save=True
+```
+* test on tusimple, [result video for testset](https://youtu.be/mHYNO2uu8Dg)
+```
+python -m scripts.predict_pinet on_folder --path="{tusimple_root}/lane_detection/test_set/clips/0530" --save=True --recursive=True
+```
 
 # Repository Author
 * Zhiliang Zhou, [Linkedin](https://www.linkedin.com/in/zhiliang-zhou/)
