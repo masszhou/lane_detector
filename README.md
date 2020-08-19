@@ -10,6 +10,9 @@ My related works including
 * make this model compatible for torch JTI compile (not included in this repo)
 * use libtorch and container to deploy this model with 0.03-0.04 second per frame on laptop with NVidia GTX 1080 (not included in this repo)
 
+My results:
+* culane [day](https://youtu.be/btAidqruAlw) and [night](https://youtu.be/HmPz5ugQD_I)
+
 # 2. PINet
 The key concept from original PINet paper is not doing pixel segmentation but key points detection with anchor based methods. This idea saved a lot of post-processing works compared with pixel based semantic segmentation, and more robust.
 
