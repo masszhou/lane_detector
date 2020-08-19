@@ -5,7 +5,7 @@ This repo is based on the paper [Key Points Estimation and Point Instance Segmen
 
 My related works including
 * retrained the network with tusimple, culane and BDD100K, significantly extended the performance for various road types and directions. original work uses only tusimple.
-* refactor projects
+* rewrite projects
 * some detailed discussion about the original implementation.
 * make this model compatible for torch JTI compile (not included in this repo)
 * use libtorch and container to deploy this model with 0.03-0.04 second per frame on laptop with NVidia GTX 1080 (not included in this repo)
