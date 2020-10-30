@@ -34,6 +34,9 @@ There are many discussion about different residual block layout. Some typical la
 
 * original Stacked Hourglass Networks used **(e) full pre-activation**
 * PINet uses **(c) relu before addition**
+* due to the discussion in [Identity Mappings in Deep Residual Networks](https://arxiv.org/pdf/1603.05027v3.pdf)
+  * for shallow network, the influence is not significant between **(c)** and **(e)**
+  * otherwise recommend **(e)**
 
 ### 2.3 Loss function
 PINet has 3 branches output. The confidence and offset is similar to other anchor based detection algorithm. The instance branch mapping keypoints from different lanes into a high dimensional feature space. The output looks like a similarity matrix. 
